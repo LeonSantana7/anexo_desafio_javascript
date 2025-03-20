@@ -12,10 +12,6 @@ class Carousel {
         this.Url = url;
     }
 
-    static _sequence = 0;
-    static _size = 0;
-    static _interval;
-
     static Start(arr) {
         if (arr) {
             if (arr.length > 0) {
@@ -29,18 +25,18 @@ class Carousel {
         }
     }
 
-    static Next(arr) {
+    static Next(carouselArr) {
         const carouselDiv = document.getElementById('carousel');
         const carouselTitleDiv = document.getElementById('carousel-title');
 
         if (carouselDiv && carouselTitleDiv) {
-            const currentSlide = arr[Carousel._sequence];
+            const slide = carouselArr[Carousel._sequence];
 
-            carouselDiv.style.backgroundImage = `url('img/${currentSlide.Image}')`;
+            carouselDiv.style.backgroundImage = `url('img/${slide.Image}')`;
             carouselDiv.style.backgroundSize = 'cover';
             carouselDiv.innerHTML = '';
 
-            carouselTitleDiv.innerHTML = `<a href="${currentSlide.Url}">${currentSlide.Title}</a>`;
+            carouselTitleDiv.innerHTML = `<a href="${slide.Url}">${slide.Title}</a>`;
 
             Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
         }
