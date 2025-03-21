@@ -26,17 +26,17 @@ class Carousel {
     }
 
     static Next(carouselArr) {
-        const carouselDiv = document.getElementById('carousel');
-        const carouselTitleDiv = document.getElementById('carousel-title');
+        const carouselSlide = document.getElementById('carousel');
+        const carouselTitle = document.getElementById('carousel-title');
 
-        if (carouselDiv && carouselTitleDiv) {
+        if (carouselSlide && carouselTitle) {
             const slide = carouselArr[Carousel._sequence];
 
-            carouselDiv.style.backgroundImage = `url('img/${slide.Image}')`;
-            carouselDiv.style.backgroundSize = 'cover';
-            carouselDiv.innerHTML = '';
+            carouselSlide.style.backgroundImage = `url('img/${slide.Image}')`;
+            carouselSlide.style.backgroundSize = 'cover';
+            carouselSlide.innerHTML = '';
 
-            carouselTitleDiv.innerHTML = `<a href="${slide.Url}">${slide.Title}</a>`;
+            carouselTitle.innerHTML = `<a href="${slide.Url}">${slide.Title}</a>`;
 
             Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
         }

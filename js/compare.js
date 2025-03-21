@@ -30,24 +30,30 @@ function GetCarArrPosition(arr, carClass) {
 }
 
 function SetCarToCompare(el, carClass) {
-    if (!(carClass instanceof Car)) {
-        throw "Você precisa passar um objeto da classe Car";
-    }
+    try {
+        if (!(carClass instanceof Car)) {
+            throw new Error("Você precisa passar um objeto da classe Car");
+        }
 
-    if (el.checked) {
-        if (carArr.length >= 2) {
-            alert("Você só pode comparar dois carros!");
-            el.checked = false;
-            return;
+        if (el.checked) {
+            if (carArr.length >= 2) {
+                alert("Você só pode comparar dois carros!");
+                el.checked = false;
+                return;
+            }
+            carArr.push(carClass);
+        } else {
+            let index = GetCarArrPosition(carArr, carClass);
+            if (index !== -1) {
+                carArr.splice(index, 1);
+            }
         }
-        carArr.push(carClass);
-    } else {
-        let index = GetCarArrPosition(carArr, carClass);
-        if (index !== -1) {
-            carArr.splice(index, 1);
-        }
+    } catch (error) {
+        alert(error.message);
     }
 }
+
+
 
 
 function ShowCompare() {
