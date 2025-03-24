@@ -55,6 +55,7 @@ function SetCarToCompare(el, carClass) {
     checkboxes.forEach(checkbox => {
         if (!checkbox.checked && carArr.length >= 2) {
             checkbox.disabled = true;
+
         } else {
             checkbox.disabled = false;
         }
