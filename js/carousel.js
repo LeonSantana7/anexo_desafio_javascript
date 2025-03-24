@@ -1,5 +1,3 @@
-//carousel
-
 //Array storage class
 let carouselArr = [];
 

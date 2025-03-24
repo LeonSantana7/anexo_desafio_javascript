@@ -51,6 +51,14 @@ function SetCarToCompare(el, carClass) {
     } catch (error) {
         alert(error.message);
     }
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        if (!checkbox.checked && carArr.length >= 2) {
+            checkbox.disabled = true;
+        } else {
+            checkbox.disabled = false;
+        }
+    });
 }
 
 
@@ -71,6 +79,7 @@ function HideCompare() {
 }
 
 function UpdateCompareTable() {
+
     for (let i = 0; i < 2; i++) {
         let car = carArr[i];
 
