@@ -22,11 +22,10 @@ class Carousel {
             throw "Method Start need a Array Variable.";
         }
     }
-
     static Next(carouselArr) {
         const carouselSlide = document.getElementById('carousel');
         const carouselTitle = document.getElementById('carousel-title');
-
+        
         if (carouselSlide && carouselTitle) {
             const slide = carouselArr[Carousel._sequence];
 
