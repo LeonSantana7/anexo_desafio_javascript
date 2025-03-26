@@ -86,3 +86,104 @@ div#compare {
     -webkit-box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
     box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
 }
+
+/* Responsividade */
+@media (min-width:1201px) and (max-width: 1928px) {
+    ul.modelcars {
+        display: flex;
+        justify-content: center;
+    }
+
+    div#compare {
+        width: 70vw;
+        left: 15vw;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    ul.modelcars {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    ul.modelcars li {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    img.photocar {
+        width: 100%;
+    }
+
+    div#compare {
+        width: 80vw;
+        left: 10vw;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    ul.modelcars {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul.modelcars li {
+        width: 80%;
+    }
+
+    img.photocar {
+        width: 100%;
+    }
+
+    div#compare {
+        width: 90vw;
+        left: 5vw;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td:nth-child(1) {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    ul.modelcars {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul.modelcars li {
+        width: 100%;
+    }
+
+    img.photocar {
+        width: 100%;
+    }
+
+    div#compare {
+        width: 95vw;
+        left: 2.5vw;
+        height: auto;
+        max-height: none;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td:nth-child(1) {
+        width: 60%;
+    }
+
+    button {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+    }
+}

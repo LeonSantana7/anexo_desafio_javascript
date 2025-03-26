@@ -51,19 +51,16 @@ function SetCarToCompare(el, carClass) {
     } catch (error) {
         alert(error.message);
     }
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        if (!checkbox.checked && carArr.length >= 2) {
-            checkbox.disabled = true;
 
-        } else {
-            checkbox.disabled = false;
-        }
-    });
+    updateCheckboxesState();
 }
 
-
-
+function updateCheckboxesState() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.disabled = !checkbox.checked && carArr.length >= 2;
+    });
+}
 
 function ShowCompare() {
     if (carArr.length < 2) {
@@ -81,20 +78,20 @@ function HideCompare() {
 
 function UpdateCompareTable() {
 
-    for (let i = 0; i < 2; i++) {
-        let car = carArr[i];
-
-        document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${car.image}" width="200">`;
-        document.getElementById(`compare_modelo_${i}`).textContent = car.nome;
-        document.getElementById(`compare_alturacacamba_${i}`).textContent = car.alturaCacamba;
-        document.getElementById(`compare_alturaveiculo_${i}`).textContent = car.alturaVeiculo;
-        document.getElementById(`compare_alturasolo_${i}`).textContent = car.alturaSolo;
-        document.getElementById(`compare_capacidadecarga_${i}`).textContent = car.capacidadeCarga;
-        document.getElementById(`compare_motor_${i}`).textContent = car.motor;
-        document.getElementById(`compare_potencia_${i}`).textContent = car.potencia;
-        document.getElementById(`compare_volumecacamba_${i}`).textContent = car.volumeCacamba;
-        document.getElementById(`compare_roda_${i}`).textContent = car.roda;
-        document.getElementById(`compare_preco_${i}`).textContent = `R$ ${car.preco.toLocaleString('pt-BR')}`;
-    }
+    carArr.forEach((car, index) => {
+        if (index < 2) {
+            document.getElementById(`compare_image_${index}`).innerHTML = `<img src="${car.image}" width="200" alt="Imagem do ${car.nome}">`;
+            document.getElementById(`compare_modelo_${index}`).textContent = car.nome;
+            document.getElementById(`compare_alturacacamba_${index}`).textContent = car.alturaCacamba;
+            document.getElementById(`compare_alturaveiculo_${index}`).textContent = car.alturaVeiculo;
+            document.getElementById(`compare_alturasolo_${index}`).textContent = car.alturaSolo;
+            document.getElementById(`compare_capacidadecarga_${index}`).textContent = car.capacidadeCarga;
+            document.getElementById(`compare_motor_${index}`).textContent = car.motor;
+            document.getElementById(`compare_potencia_${index}`).textContent = car.potencia;
+            document.getElementById(`compare_volumecacamba_${index}`).textContent = car.volumeCacamba;
+            document.getElementById(`compare_roda_${index}`).textContent = car.roda;
+            document.getElementById(`compare_preco_${index}`).textContent = `R$ ${car.preco.toLocaleString('pt-BR')}`;
+        }
+    });
 }
 

@@ -34,12 +34,13 @@ function Post(form) {
 }
 
 function Enviar(data) {
-    var nome = document.querySelector("input[name='nome']");
-
+    const nome = document.querySelector("input[name='nome']");
+    // trim remove espaços em branco
     if (nome && nome.value.trim() !== "") {
         console.log("Dados enviados:", data);
+        document.querySelector("form").reset();
     } else {
         alert('Por favor, preencha o nome.');
     }
-    
+
 }
