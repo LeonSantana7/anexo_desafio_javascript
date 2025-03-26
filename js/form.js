@@ -20,7 +20,7 @@ function Post(form) {
         form.elements.namedItem("email").value,
         form.elements.namedItem("cpf").value,
         form.elements.namedItem("telefone").value,
-        form.elements.namedItem("contato").value
+        tipoContato
     );
 
     if (tipoContato !== "TELEFONE" && tipoContato !== "E-MAIL") {
@@ -29,17 +29,17 @@ function Post(form) {
     }
 
     alert(`Obrigado, ${data.nome}! Seus dados foram enviados com sucesso.`);
-    Enviar();
-    console.log("Dados enviados:", data);
+    Enviar(data);
 
 }
 
-function Enviar() {
+function Enviar(data) {
     var nome = document.querySelector("input[name='nome']");
 
     if (nome && nome.value.trim() !== "") {
-        document.location = 'index.html';
+        console.log("Dados enviados:", data);
     } else {
         alert('Por favor, preencha o nome.');
     }
+    
 }
