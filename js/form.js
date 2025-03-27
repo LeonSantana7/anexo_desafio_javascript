@@ -37,7 +37,7 @@ function Enviar(data) {
     const nome = document.querySelector("input[name='nome']");
     // trim remove espaços em branco
     if (nome && nome.value.trim() !== "") {
-        console.log("Dados enviados:", data);
+        console.table({"Dados enviados:": data});
         document.querySelector("form").reset();
     } else {
         alert('Por favor, preencha o nome.');

@@ -1,10 +1,7 @@
-
 //car
 let carArr = [];
 
 class Car {
-
-
     constructor(nome, preco, alturaCacamba, alturaVeiculo, alturaSolo, capacidadeCarga, motor, potencia, volumeCacamba, roda, image) {
         this.nome = nome;
         this.preco = preco;
