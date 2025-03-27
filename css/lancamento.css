@@ -113,12 +113,23 @@ div#compare {
     }
 
     img.photocar {
-        width: 100%;
+        width: 60%;
     }
 
     div#compare {
         width: 80vw;
         left: 10vw;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        margin-right: 10%;
     }
 }
 
@@ -127,6 +138,7 @@ div#compare {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: 20%;
     }
 
     ul.modelcars li {
@@ -134,16 +146,31 @@ div#compare {
     }
 
     img.photocar {
-        width: 100%;
+        width: 60%;
+
     }
 
     div#compare {
-        width: 90vw;
-        left: 5vw;
+        width: 100vw;
+        left: 1vw;
+
+
+    }
+
+    div#compare img {
+        width: 80%;
     }
 
     table {
         width: 100%;
+
+    }
+
+    button {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        margin-right: 10%;
     }
 
     td:nth-child(1) {
@@ -151,7 +178,7 @@ div#compare {
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
     ul.modelcars {
         display: flex;
         flex-direction: column;
@@ -163,14 +190,18 @@ div#compare {
     }
 
     img.photocar {
-        width: 100%;
+        width: 70%;
     }
 
     div#compare {
-        width: 95vw;
+        width: 100vw;
         left: 2.5vw;
         height: auto;
-        max-height: none;
+
+    }
+
+    div#compare img {
+        width: 100px;
     }
 
     table {
@@ -185,5 +216,7 @@ div#compare {
         width: 100%;
         height: 50px;
         font-size: 16px;
+        margin: 10%;
     }
+
 }
