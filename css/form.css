@@ -31,6 +31,7 @@ main div {
     padding-bottom: 30px;
 }
 
+
 .forms {
     display: block;
     text-align: center;
@@ -40,6 +41,7 @@ h2 {
     text-align: left;
     font-weight: 800;
 }
+
 
 
 button {
@@ -53,6 +55,24 @@ button {
 button:hover {
     transform: scale(1.1);
 
+}
+.acessibility {
+    background: transparent; 
+    border: none; 
+    padding: 0; 
+    margin-left: 1%;
+    transition: all .3s;
+    width: 13%;
+    margin-right: 20%;
+   
+}
+
+.acessibility:hover{
+    transform: scale(1.1);
+}
+
+.acessibility img{
+    width: 40px;
 }
 
 .titulo {

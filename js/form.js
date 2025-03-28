@@ -44,3 +44,11 @@ function Enviar(data) {
     }
 
 }
+
+function vozAcessibilidade() {
+    if (responsiveVoice.voiceSupport()) {
+        responsiveVoice.speak("Entre em contato conosco, a Ford agradece!", "Brazilian Portuguese Female");
+    } else {
+        alert("O seu navegador não suporta síntese de voz.");
+    }
+}

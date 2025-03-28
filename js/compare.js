@@ -92,3 +92,10 @@ function UpdateCompareTable() {
     });
 }
 
+function vozAcessibilidade() {
+    if (responsiveVoice.voiceSupport()) {
+        responsiveVoice.speak("Ford Ranger 2022, potência e tecnologia para qualquer desafio. Robusta, moderna e preparada para qualquer terreno, a Ford Ranger 2022 é a picape que une a força e inovação.", "Brazilian Portuguese Female");
+    } else {
+        alert("O seu navegador não suporta síntese de voz.");
+    }
+}

@@ -101,6 +101,23 @@ span.redesociais {
     vertical-align: super;
 }
 
+.acessibility {
+    background: transparent; 
+    border: none; 
+    padding: 0; 
+    margin-left: 1%;
+    transition: all .3s;
+   
+}
+
+.acessibility:hover{
+    transform: scale(1.1);
+}
+
+.acessibility img{
+    width: 40px;
+}
+
 footer {
     background: #1B357E;
     padding: 20px;

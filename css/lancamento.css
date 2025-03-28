@@ -15,7 +15,36 @@ img.photocar {
     display: block;
     width: 250px;
 }
+.video{
+    display: flex;
+    gap: 5%;
+    width: 90%;
+    margin-left: 5%;
+}
 
+.video p{
+    font-weight: bold;
+    width: 30%;
+    height: 20%;
+    margin-top: 10%;
+}
+.acessibility {
+    background: transparent; 
+    border: none; 
+    padding: 0; 
+    margin-left: 1%;
+    transition: all .3s;
+     height: 10%;
+     margin-top: 17%;
+}
+
+.acessibility:hover{
+    transform: scale(1.1);
+}
+
+.acessibility img{
+    width: 50px;
+}
 .checkbox {
     width: 30px;
     height: 30px;

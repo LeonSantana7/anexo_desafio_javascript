@@ -32,3 +32,11 @@ class Carousel {
 
 
 };
+
+function vozAcessibilidade() {
+    if (responsiveVoice.voiceSupport()) {
+        responsiveVoice.speak("Bem-vindo ao site da Ford. Utilize os recursos de acessibilidade.", "Brazilian Portuguese Female");
+    } else {
+        alert("O seu navegador não suporta síntese de voz.");
+    }
+}
