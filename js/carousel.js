@@ -24,8 +24,20 @@ class Carousel {
     static Next(carouselArr) {
         const slide = carouselArr[Carousel._sequence];
 
-        document.getElementById('carousel').style.background = `url('img/${slide.Image}') center/cover`;
-        document.getElementById('carousel-title').innerHTML = `<a href="${slide.Url}">${slide.Title}</a>`;
+        document.getElementById('carousel').style.backgroundImage = `url('img/${slide.Image}')`;
+        document.getElementById('carousel').style.backgroundSize = "contain";
+        document.getElementById('carousel').style.backgroundPosition = "center";
+        document.getElementById('carousel').style.backgroundRepeat = "no-repeat";
+
+        const titleElement = document.getElementById('carousel-title');
+        titleElement.textContent = slide.Title;
+
+        const linkElement = document.createElement('a');
+        linkElement.href = slide.Url;
+        linkElement.textContent = slide.Title;
+
+        titleElement.innerHTML = "";
+        titleElement.appendChild(linkElement);
 
         Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
     }

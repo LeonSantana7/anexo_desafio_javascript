@@ -155,6 +155,7 @@ div#compare {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-left: 10%;
     }
 
     ul.modelcars li {
@@ -171,6 +172,17 @@ div#compare {
         left: 10vw;
     }
 
+    .video {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .video p {
+        width: 100%;
+    }
+
+
     .acessibility {
         background: transparent;
         border: none;
@@ -178,7 +190,7 @@ div#compare {
         margin-left: 1%;
         transition: all .3s;
         height: 10%;
-        margin-top: 17%;
+        margin-top: 5%;
     }
 
     .acessibility:hover {
@@ -219,16 +231,25 @@ div#compare {
     }
 
     div#compare {
-        width: 100vw;
-        left: 1vw;
-
-
+        width: 80vw;
+        left: 10vw;
     }
 
 
     div#compare img {
         width: 80%;
     }
+
+    .video {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .video p {
+        width: 100%;
+    }
+
 
     .acessibility {
         background: transparent;
@@ -270,6 +291,10 @@ div#compare {
         width: 100%;
     }
 
+    header {
+        width: 100%;
+    }
+
     ul.modelcars {
         display: flex;
         flex-direction: column;
@@ -285,13 +310,14 @@ div#compare {
     }
 
     div#compare {
-        width: 10vh;
+        width: 10%;
+        left: 1vw;
         height: auto;
-
+        font-size: 10px;
     }
 
     div#compare img {
-        width: 80px;
+        width: 60px;
     }
 
     .video {
@@ -336,6 +362,10 @@ div#compare {
         height: 50px;
         font-size: 16px;
         margin: 10%;
+    }
+
+    footer {
+        width: 100%;
     }
 
 }
