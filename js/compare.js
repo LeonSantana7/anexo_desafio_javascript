@@ -32,21 +32,22 @@ function SetCarToCompare(el, carClass) {
             throw new Error("Você precisa passar um objeto da classe Car");
         }
 
-        if (el.checked) {
-            if (carArr.length >= 2) {
-                alert("Você só pode comparar dois carros!");
-                el.checked = false;
-                return;
-            }
-            carArr.push(carClass);
-        } else {
-            let index = GetCarArrPosition(carArr, carClass);
-            if (index !== -1) {
-                carArr.splice(index, 1);
-            }
-        }
     } catch (error) {
         alert(error.message);
+    }
+
+    if (el.checked) {
+        if (carArr.length >= 2) {
+            alert("Você só pode comparar dois carros!");
+            el.checked = false;
+            return;
+        }
+        carArr.push(carClass);
+    } else {
+        let index = GetCarArrPosition(carArr, carClass);
+        if (index !== -1) {
+            carArr.splice(index, 1);
+        }
     }
 
     updateCheckboxesState();
@@ -74,7 +75,6 @@ function HideCompare() {
 }
 
 function UpdateCompareTable() {
-
     carArr.forEach((car, index) => {
         if (index < 2) {
             document.getElementById(`compare_image_${index}`).innerHTML = `<img src="${car.image}" width="200" alt="Imagem do ${car.nome}">`;
