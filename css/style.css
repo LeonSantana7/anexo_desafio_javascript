@@ -17,9 +17,9 @@ div#carousel {
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    margin-top: 5%;
     background-size: cover;
     background-position: center center;
+
 }
 
 div#carousel-title a {
@@ -121,6 +121,7 @@ span.redesociais {
 footer {
     background: #1B357E;
     padding: 20px;
+    
 }
 
 footer div {

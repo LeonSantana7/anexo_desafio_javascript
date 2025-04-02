@@ -42,7 +42,6 @@ class Carousel {
         Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
     }
 
-
 };
 
 function vozAcessibilidade() {
